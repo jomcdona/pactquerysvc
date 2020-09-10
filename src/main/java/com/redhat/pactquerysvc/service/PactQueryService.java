@@ -11,6 +11,7 @@ public class PactQueryService {
 
     @Autowired
     ContactRepository contactsrepo;
+
     public List<ContactDM> findContactByState(String state) {
         return contactsrepo.findContactByState(state);
     }
