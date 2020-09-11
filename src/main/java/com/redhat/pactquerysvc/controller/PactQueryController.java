@@ -11,7 +11,7 @@ import java.util.List;
 import com.redhat.pactquerysvc.model.ContactDM;
 import com.redhat.pactquerysvc.service.PactQueryService;
 
-//@RestController
+@RestController
 public class PactQueryController {
 
     @Autowired
