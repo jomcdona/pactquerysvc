@@ -7,7 +7,7 @@ projects:
       type: git
   - name: serverlessdemo
     source:
-      location: 'http://gogs.apps.devocp4.lab.msp.redhat.com/pactdef/pact-contactlog-svc.git'
+      location: 'http://gogs.apps.devocp4.lab.msp.redhat.com/pactdev/pact-contactlog-svc.git'
       type: git
   - name: pactproducer
     source:
