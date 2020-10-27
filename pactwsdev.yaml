@@ -3,15 +3,15 @@ metadata:
 projects:
   - name: pactquerysvc
     source:
-      location: 'http://gogs.apps.devocp4.lab.msp.redhat.com/jomcdona/pactquerysvc.git'
+      location: 'http://gogs.apps.devocp4.lab.msp.redhat.com/pactdev/pactquerysvc.git'
       type: git
   - name: serverlessdemo
     source:
-      location: 'http://gogs.apps.devocp4.lab.msp.redhat.com/jomcdona/pact-contactlog-svc.git'
+      location: 'http://gogs.apps.devocp4.lab.msp.redhat.com/pactdef/pact-contactlog-svc.git'
       type: git
   - name: pactproducer
     source:
-      location: 'http://gogs.apps.devocp4.lab.msp.redhat.com/jomcdona/pactproducer.git'
+      location: 'http://gogs.apps.devocp4.lab.msp.redhat.com/pactdev/pactproducer.git'
       type: git
 components:
   - id: redhat/java8/latest
