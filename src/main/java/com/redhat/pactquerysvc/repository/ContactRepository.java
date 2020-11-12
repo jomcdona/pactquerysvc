@@ -14,5 +14,7 @@ public interface ContactRepository extends CrudRepository<ContactDM, Long>
     public List<ContactDM> findContactByState(String state);
     //Interface for finding contact events by country
     public List<ContactDM> findContactByCountry(String country);
+    //Interface for finding contact events by zipcode
+    public List<ContactDM> findContactByzipcode(String zipcode);
         
 }

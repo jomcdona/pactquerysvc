@@ -21,7 +21,7 @@ public class PactQueryController {
     @ResponseBody
     public String rootCall()
     {
-        return "Hellow World";
+        return "Hello World";
     }
 
     @GetMapping(path = "/findcontactbystate", consumes = "text/plain", produces = "application/json; charset=UTF-8")
@@ -36,6 +36,13 @@ public class PactQueryController {
     public List<ContactDM>findByCountry(@RequestParam("country") String country)
     {
         return pqs.findContactByCountry(country);
+    }
+
+    @GetMapping(path = "/findcontactbyzipcode", consumes = "text/plain", produces = "application/json; charset=UTF-8")
+    @ResponseBody
+    public List<ContactDM> findByzipcode(@RequestParam("zipcode") String zipcode)
+    {
+        return pqs.findContactByzipcode(zipcode);
     }
     
 }
