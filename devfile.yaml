@@ -4,15 +4,7 @@ metadata:
 projects:
   - name: pactquerysvc
     source:
-      location: 'http://gogs.apps.devocp4.lab.msp.redhat.com/pactdev/pactquerysvc.git'
-      type: git
-  - name: serverlessdemo
-    source:
-      location: 'http://gogs.apps.devocp4.lab.msp.redhat.com/pactdev/pact-contactlog-svc.git'
-      type: git
-  - name: pactproducer
-    source:
-      location: 'http://gogs.apps.devocp4.lab.msp.redhat.com/pactdev/pactproducer.git'
+      location: 'https://github.com/jomcdona/pactquerysvc.git'
       type: git
 components:
   - id: redhat/java8/latest
@@ -55,13 +47,13 @@ commands:
         component: maven
   - name: 2. Run
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/spring-boot-http-booster'
+      - workdir: '${CHE_PROJECTS_ROOT}/pactquerysvc'
         type: exec
         command: 'MAVEN_OPTS="-Xmx200m" && mvn -Duser.home=${HOME} spring-boot:run'
         component: maven
   - name: 3. Run in debug mode
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/spring-boot-http-booster'
+      - workdir: '${CHE_PROJECTS_ROOT}/pactquerysvc'
         type: exec
         command: >-
           mvn  -Duser.home=${HOME} spring-boot:run
@@ -70,13 +62,13 @@ commands:
         component: maven
   - name: 4. Run tests
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/spring-boot-http-booster'
+      - workdir: '${CHE_PROJECTS_ROOT}/pactquerysvc'
         type: exec
         command: 'MAVEN_OPTS="-Xmx200m" && mvn -Duser.home=${HOME} verify'
         component: maven
   - name: 5. Log into deployment cluster
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/spring-boot-http-booster'
+      - workdir: '${CHE_PROJECTS_ROOT}/pactquerysvc'
         type: exec
         command: |
           echo
