@@ -18,6 +18,7 @@ public class PactQueryService {
         return contactsrepo.findContactByState(state);
     }
 
+    //country lookup
     public List<ContactDM> findContactByCountry(String country)
     {
         return contactsrepo.findContactByCountry(country);
