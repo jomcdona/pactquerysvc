@@ -24,4 +24,9 @@ public class PactQueryService {
         return contactsrepo.findContactByCountry(country);
     }
 
+    public List<ContactDM> findContactByzipcode(String zipcode)    
+    {        
+        return contactsrepo.findContactByzipcode(zipcode);    
+    }
+
 }
