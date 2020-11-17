@@ -37,4 +37,11 @@ public class PactQueryController {
     {
         return pqs.findContactByCountry(country);
     }
+
+     @GetMapping(path = "/findcontactbyzipcode", consumes = "text/plain", produces = "application/json; charset=UTF-8")    
+    @ResponseBody    
+    public List<ContactDM> findByzipcode(@RequestParam("zipcode") String zipcode)
+    {        
+        return pqs.findContactByzipcode(zipcode);
+    }
 }
